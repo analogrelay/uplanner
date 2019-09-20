@@ -1,15 +1,17 @@
 {
-    "extends": "../../tsconfig.json",
+    "compileOnSave": false,
     "compilerOptions": {
+        "module": "commonjs",
+        "target": "es2019",
+        "sourceMap": true,
+        "declaration": true,
+        "importHelpers": true,
+        "moduleResolution": "node",
+        "strict": true,
         "outDir": "./dist",
         "rootDir": "./src"
     },
     "include": [
         "./**/*.ts"
-    ],
-    "references": [
-        {
-            "path": "../../common/logging"
-        }
     ]
 }
