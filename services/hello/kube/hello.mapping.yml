@@ -1,0 +1,9 @@
+# Ambassador mapping(s) for the hello service
+apiVersion: getambassador.io/v1
+kind: Mapping
+metadata:
+  name: hello
+  namespace: uplanner
+spec:
+  prefix: /api/v0/services/hello/
+  service: hello:80

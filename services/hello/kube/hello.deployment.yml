@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello
+  namespace: uplanner
+  labels:
+    app: uplanner-hello
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: uplanner-hello
+  template:
+    metadata:
+      labels:
+        app: uplanner-hello
+    spec:
+      containers:
+        - name: uplanner-hello-app
+          image: uplanner/hello:v1
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              cpu: "250m"
+              memory: "64Mi"

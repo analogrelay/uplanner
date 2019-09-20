@@ -1,0 +1,22 @@
+{
+  "name": "@uplanner/logging",
+  "version": "0.1.0",
+  "description": "uPlanner Logging components",
+  "main": "dist/index.js",
+  "author": "Andrew Stanton-Nurse <andrew@stanton-nurse.com>",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=12.0"
+  },
+  "devDependencies": {
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3"
+  },
+  "scripts": {
+    "build": "tslint --project . && tsc --build"
+  },
+  "dependencies": {
+    "winston": "^3.2.1"
+  }
+}
